@@ -1,4 +1,4 @@
-public class main {
+public class NuovoProdotto {
     public static void main(String[] args) throws Exception {
 
         Prodotto giacca = new Prodotto();

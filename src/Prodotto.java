@@ -53,7 +53,7 @@ public class Prodotto {
     public void nomeEsteso(){
         Scanner scan = new Scanner(System.in);
         System.out.print("Inserisci il tuo nome: ");
-        String nome = scan.nextLine();
-        System.out.println(" Il nome inserito è: "+ nome +"\n il codice associato è: " + getRandomCodice());
+        String nomeInput = scan.nextLine();
+        System.out.println(" Il nome inserito è: "+ nomeInput +"\n il codice associato è: " + getRandomCodice());
     }
 }
