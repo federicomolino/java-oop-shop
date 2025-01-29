@@ -9,6 +9,8 @@ public class Prodotto {
 
     public int codiceGenerato;
 
+    public double prezzoInInput;
+
     public String nome;
 
     public String descrizione;
@@ -36,15 +38,25 @@ public class Prodotto {
     }
 
     public double getPrezzo (double prezzoIniziale){
-        prezzo = 44.5;
+        /*prezzo = 44.5;
         prezzoIniziale = prezzo;
-        return prezzoIniziale;
+        return prezzoIniziale;*/
+        System.out.print("Inserisci il prezzo inizile senza IVA: ");
+        Scanner scan = new Scanner(System.in);
+        Double prezzoInput = scan.nextDouble();
+        prezzo = prezzoInput;
+        return prezzo;
     }
 
-    public double getPrezzoIva (double prezzoConIVa){        
-        prezzoConIVa = 22;
-        double prezzoBase = getPrezzo(0);
-        double prezzoConIva = prezzoConIVa;
+    public double getPrezzoInput(){
+        return prezzo;
+    }
+
+
+    public double getPrezzoIva (double totaleIva){        
+        totaleIva = 22;
+        double prezzoBase = prezzo;
+        double prezzoConIva = totaleIva;
         double prezzoConIvaAggiunta = (prezzoBase * prezzoConIva)/100;
         double prezzoFinale = prezzoBase + prezzoConIvaAggiunta;
         return prezzoFinale;
@@ -54,6 +66,6 @@ public class Prodotto {
         Scanner scan = new Scanner(System.in);
         System.out.print("Inserisci il tuo nome: ");
         String nomeInput = scan.nextLine();
-        System.out.println(" Il nome inserito è: "+ nomeInput +"\n il codice associato è: " + getRandomCodice());
+        System.out.println(" Il nome inserito è: "+ nomeInput +"\nil codice associato è: " + getRandomCodice());
     }
 }
