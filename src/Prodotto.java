@@ -37,7 +37,7 @@ public class Prodotto {
         return codiceGenerato;
     }
 
-    public double getPrezzo (double prezzoIniziale){
+    public double getPrezzo (){//double prezzoIniziale
         /*prezzo = 44.5;
         prezzoIniziale = prezzo;
         return prezzoIniziale;*/

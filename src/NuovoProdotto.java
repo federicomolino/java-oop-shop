@@ -8,7 +8,7 @@ public class NuovoProdotto {
         System.out.println("il codice è: " + giacca.codiceRandom(0));
 
         //Richiamo il metodo su cui è presente il prezzo iniziale
-        giacca.getPrezzo(0);
+        giacca.getPrezzo();
         //Stampo il valore salvato dentro il metodo getPrezzoInput
         System.out.println("Il prezzo iniziale è: " + giacca.getPrezzoInput());
 
@@ -25,7 +25,7 @@ public class NuovoProdotto {
         polo.codiceRandom(0);
         System.out.println("il codice è: " + polo.codiceRandom(0));
 
-        polo.getPrezzo(0);
+        polo.getPrezzo();
         System.out.println("Il prezzo iniziale è: " + polo.getPrezzoInput());
 
         polo.getPrezzoIva(0);
