@@ -6,10 +6,10 @@ public class Prodotto {
     
     //Mi creo i vari attributi
     private int codice;
-                               
+
     private double prezzo;
 
-    public double iva;
+    public int iva;
 
     public Prodotto(){
 
@@ -29,7 +29,7 @@ public class Prodotto {
         return codice;
     }
 
-    public double getPrezzo (){//double prezzoIniziale
+    public double prezzoIniziale (){//double prezzoIniziale
         /*prezzo = 44.5;
         prezzoIniziale = prezzo;
         return prezzoIniziale;*/
@@ -44,13 +44,17 @@ public class Prodotto {
         return prezzo;
     }
 
+    public int getDefaultIva(){
+        iva = 22;
+        return iva;
+    }
 
-    public double getPrezzoIva (double totaleIva){        
-        totaleIva = 22;
-        double prezzoBase = prezzo;
-        double prezzoConIva = totaleIva;
-        double prezzoConIvaAggiunta = (prezzoBase * prezzoConIva)/100;
-        double prezzoFinale = prezzoBase + prezzoConIvaAggiunta;
+    public double prezzoIva (){        
+        //int totaleIva = iva;
+        //double prezzoBase = prezzo;
+        //double prezzoConIva = totaleIva;
+        double prezzoConIvaAggiunta = (prezzo * iva)/100;
+        double prezzoFinale = prezzo + prezzoConIvaAggiunta;
         return prezzoFinale;
     }
 
