@@ -4,8 +4,8 @@ public class NuovoProdotto {
         Prodotto giacca = new Prodotto();
 
         //Richiamo il metodo che genra numero random
-        giacca.codiceRandom(0);
-        System.out.println("il codice è: " + giacca.codiceRandom(0));
+        giacca.codiceRandom();
+        System.out.println("il codice è: " + giacca.codiceRandom());
 
         //Richiamo il metodo su cui è presente il prezzo iniziale
         giacca.getPrezzo();
@@ -22,8 +22,8 @@ public class NuovoProdotto {
 
         Prodotto polo = new Prodotto();
 
-        polo.codiceRandom(0);
-        System.out.println("il codice è: " + polo.codiceRandom(0));
+        polo.codiceRandom();
+        System.out.println("il codice è: " + polo.codiceRandom());
 
         polo.getPrezzo();
         System.out.println("Il prezzo iniziale è: " + polo.getPrezzoInput());

@@ -24,12 +24,12 @@ public class Prodotto {
     }
     
     //Creo un metodo che andrà a generare un numero randomico fino a 3000
-    public int codiceRandom(int codiceRandom){
+    public int codiceRandom(){
         Random ran = new Random();
         int max = 3000;
         int numero = ran.nextInt(max);
-        codiceGenerato = codiceRandom + numero;
-        return codiceRandom + numero;
+        codiceGenerato = numero;
+        return codiceGenerato;
     }
 
     //All'interno sarà salvato il codice generato in precedenza
