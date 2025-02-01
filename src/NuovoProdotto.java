@@ -2,8 +2,8 @@
 public class NuovoProdotto {
     public static void main(String[] args) throws Exception {
 
-        Prodotto giacca = new Prodotto();
-        System.out.println("il codice è: " + giacca.codiceRandom());
+        Prodotto giacca = new Prodotto("freddo?");
+        System.out.println("il codice è: " + giacca.codiceRandom() +"\n" + giacca.descrizione);
 
         //Richiamo il metodo su cui è presente il prezzo iniziale
         giacca.prezzoIniziale();

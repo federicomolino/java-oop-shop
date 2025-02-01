@@ -9,10 +9,13 @@ public class Prodotto {
 
     private double prezzo;
 
+    public String descrizione;
+
     public int iva;
 
-    public Prodotto(){
+    public Prodotto(String descrizione){
         codiceRandom();
+        this.descrizione = descrizione;
     }
     
     //Creo un metodo che andrà a generare un numero randomico fino a 3000
