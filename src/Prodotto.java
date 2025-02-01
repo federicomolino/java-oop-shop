@@ -1,6 +1,5 @@
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Prodotto {
     
@@ -13,6 +12,8 @@ public class Prodotto {
 
     public int iva;
 
+    private String nomeProdotto;
+
     public Prodotto(String descrizione){
         codiceRandom();
         this.descrizione = descrizione;
@@ -22,40 +23,34 @@ public class Prodotto {
     public int codiceRandom(){
         Random ran = new Random();
         int max = 3000;
-        int numero = ran.nextInt(max);
-        codice = numero;
+        codice = ran.nextInt(max);
         return codice;
     }
 
-    public double prezzoIniziale (){
-        System.out.print("Inserisci il prezzo inizile senza IVA: ");
-        Scanner scan = new Scanner(System.in);
-        Double prezzoInput = scan.nextDouble();
-        prezzo = prezzoInput;
-        return prezzo;
+    public double prezzoIniziale (double prezzo){
+        this.prezzo = prezzo;
+        System.out.println("Il prezzo iniziale è: " + this.prezzo);
+        return this.prezzo;
     }
 
-    public double getPrezzoInput(){
-        return prezzo;
+    public int setDefaultIva(int iva){
+        if (iva != 4 && iva != 5 && iva != 10 && iva != 22) {
+            System.out.println("L'iva deve avere uno dei seguenti valori: 4, 5, 10, 22");
+        }else{
+            this.iva = iva;
+        }
+        return this.iva;
     }
 
-    public int setDefaultIva(){
-        System.out.print("Inserisci l'Iva del prodotto: ");
-        Scanner scan = new Scanner(System.in);
-        iva = scan.nextInt();
-        return iva;
-    }
-
-    public double prezzoIva (){
+    public void prezzoIva (){
         double prezzoConIvaAggiunta = (prezzo * iva)/100;
         double prezzoFinale = prezzo + prezzoConIvaAggiunta;
-        return prezzoFinale;
+        System.out.println("Il prezzo con iva aggiunta è: " + prezzoFinale);
     }
 
-    public void nomeEsteso(){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Inserisci il prodotto: ");
-        String nomeInput = scan.nextLine();
-        System.out.println(" Il prodotto inserito è: "+ nomeInput +"\n\til codice associato è: " + codice);
+    public String nomeEsteso( String nomeProdotto){
+        this.nomeProdotto = nomeProdotto;
+        System.out.println(" Il prodotto inserito è: "+ nomeProdotto +"\n\til codice associato è: " + codice);
+        return this.nomeProdotto;
     }
 }
