@@ -12,7 +12,7 @@ public class Prodotto {
     public int iva;
 
     public Prodotto(){
-
+        codiceRandom();
     }
     
     //Creo un metodo che andrà a generare un numero randomico fino a 3000
@@ -29,10 +29,7 @@ public class Prodotto {
         return codice;
     }
 
-    public double prezzoIniziale (){//double prezzoIniziale
-        /*prezzo = 44.5;
-        prezzoIniziale = prezzo;
-        return prezzoIniziale;*/
+    public double prezzoIniziale (){
         System.out.print("Inserisci il prezzo inizile senza IVA: ");
         Scanner scan = new Scanner(System.in);
         Double prezzoInput = scan.nextDouble();
@@ -49,11 +46,8 @@ public class Prodotto {
         return iva;
     }
 
-    public double prezzoIva (){        
-        //int totaleIva = iva;
-        //double prezzoBase = prezzo;
-        //double prezzoConIva = totaleIva;
-        double prezzoConIvaAggiunta = (prezzo * iva)/100;
+    public double prezzoIva (){
+        double prezzoConIvaAggiunta = (prezzo * getDefaultIva())/100;
         double prezzoFinale = prezzo + prezzoConIvaAggiunta;
         return prezzoFinale;
     }

@@ -3,7 +3,7 @@ public class NuovoProdotto {
 
         Prodotto giacca = new Prodotto();
         //Richiamo il metodo che genra numero random
-        giacca.codiceRandom();
+        //giacca.codiceRandom();
         System.out.println("il codice è: " + giacca.codiceRandom());
 
         //Richiamo il metodo su cui è presente il prezzo iniziale
